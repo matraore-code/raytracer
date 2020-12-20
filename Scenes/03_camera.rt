@@ -1,0 +1,41 @@
+# ------------------------------------------------------------------------------
+# RTv1 input format
+# ------------------------------------------------------------------------------
+# CAMERA line is optional.
+# Must have at least 1 LIGHT.
+# Must have at least 1 OBJECT.
+# 
+# CAMERA; fov; position; rot_angles
+#
+# LIGHT_POINT; name; position
+# LIGHT_DISTANT; name; direction
+#
+# OBJECT_SPHERE; name; color; k_diffuse; k_specular; phong_n; center; radius
+# OBJECT_PLANE; name; color; k_diffuse; k_specular; phong_n; center; normal
+# OBJECT_DISK; name; color; k_diffuse; k_specular; phong_n; center; normal; radius
+# OBJECT_CYLINDER; name; color; k_diffuse; k_specular; phong_n; center; direction; radius
+# OBJECT_CONE; name; color; k_diffuse; k_specular; phong_n; center; direction; half_angle
+
+# Camera on z-axis, looking toward (0,0,0)
+CAMERA; 60; 0,0,10; 0,0,0
+
+# Camera on x-axis, looking toward (0,0,0)
+#CAMERA; 60; 10,0,0; 0,90,0
+
+# Camera on y-axis, looking toward (0,0,0)
+#CAMERA; 60; 0,10,0; -90,0,0
+
+# Camera at somewhere else, looking toward (0,0,0)
+#CAMERA; 60; -12,-18,12; 25,-45,20
+
+LIGHT_POINT; Point Light 1; 10, 10, 10
+
+#LIGHT_POINT; Point Light 1; 2,0,-6
+
+OBJECT_SPHERE; Red Sphere 1; 0xFF0000; 0.8; 0.2; 10; -3,2,0; 2
+
+OBJECT_DISK; Green Disk 1; 0x00FF00; 0.8; 0.2; 10; 2,0,0; 3,2,1; 2
+
+OBJECT_CYLINDER; Yellow Cylinder 1; 0xFFFF00; 0.8; 0.2; 10; 0,-3,0; 1,1,0; 0.5
+
+OBJECT_CONE; Magenta Cone 1; 0xFF00FF; 0.8; 0.2; 10; 0,0,0; -1,2,0; 20

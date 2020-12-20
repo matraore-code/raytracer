@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# RTv1 input format
+# ------------------------------------------------------------------------------
+# CAMERA line is optional.
+# Must have at least 1 LIGHT.
+# Must have at least 1 OBJECT.
+# 
+# CAMERA; fov; position; rot_angles
+#
+# LIGHT_POINT; name; position
+# LIGHT_DISTANT; name; direction
+#
+# OBJECT_SPHERE; name; color; k_diffuse; k_specular; phong_n; center; radius
+# OBJECT_PLANE; name; color; k_diffuse; k_specular; phong_n; center; normal
+# OBJECT_DISK; name; color; k_diffuse; k_specular; phong_n; center; normal; radius
+# OBJECT_CYLINDER; name; color; k_diffuse; k_specular; phong_n; center; direction; radius
+# OBJECT_CONE; name; color; k_diffuse; k_specular; phong_n; center; direction; half_angle
+
+CAMERA; 60; 0,10,10; -45,0,0
+
+LIGHT_POINT; Point Light 1; 0,10,-10
+LIGHT_POINT; Point Light 2; -5,10,10
+LIGHT_POINT; Point Light 3; 5,10,10
+
+OBJECT_SPHERE; Red Sphere 1; 0xFF0000; 0.8; 0.2; 10; 0,0,0; 1.5
+
+OBJECT_PLANE; Green Plane 1; 0x00FF00; 0.8; 0.2; 10; 0,-5,0; 0,1, 0
+
+OBJECT_CYLINDER; Yellow Cylinder 1; 0xFFFF00; 0.8; 0.2; 10; -3,0,0; 0,1,0; 1
+OBJECT_CYLINDER; Magenta Cylinder 1; 0xFF00FF; 0.8; 0.2; 10; 3,0,0; 0,1,0; 1

@@ -6,7 +6,7 @@
 /*   By: matraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 00:43:01 by matraore          #+#    #+#             */
-/*   Updated: 2020/12/19 03:20:05 by matraore         ###   ########.fr       */
+/*   Updated: 2020/12/20 09:46:42 by matraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,4 @@ void			img_to_window()
 			&data.line_length, &data.endian);
 	my_mlx_pixel_put(&data, x, y, 0x00FF0000);
 	mlx_put_image_to_window(g_window.mlx_ptr, g_window.win_ptr, data.img, x, y);
-}
-
-t_canvas		create_canvas(int x, int y)
-{
-	t_canvas	canvas;
-
-	canvas.width = x;
-	canvas.height = y;
-	canvas.color = 0x00000000;
-	return (canvas);
 }

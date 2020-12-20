@@ -6,7 +6,7 @@
 /*   By: matraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/18 23:48:28 by matraore          #+#    #+#             */
-/*   Updated: 2020/12/19 03:20:12 by matraore         ###   ########.fr       */
+/*   Updated: 2020/12/20 08:19:40 by matraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,18 @@ t_canvas		create_canvas(int x, int y);
 void			img_to_window(int x, int y, t_canvas canvas);
 
 #endif
+
+// main
+// t_scene scene = load_scene() lire le fichier .rt and create the scene , 
+// void  * render_buffer = render(scene);
+// if (--save) --> ecrire_bmp(render_buffer, scene)
+// hanlder.buffer = render_buffer // je garde le pointeur juste pour faire free
+// alloc les image par mlx_create_image, et copie render_buffer vers les images
+// ecrit la premier image dans window, mlx_put_ima...
+// mlx_hook(mlx_ptr, callback)
+//
+// callback(
+// 	scene->index .. define le cameraas 
+// 	scene->index++
+// 	mlx_put_image_to_window(hanlder.images[scene->index])
+// )
